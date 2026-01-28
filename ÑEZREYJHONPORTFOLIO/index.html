@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+
+    <title>Ñez Rey Jhon — Portfolio Hub</title>
+    <meta
+      name="description"
+      content="A modern portfolio hub directory that links to multiple individual portfolio websites."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#directory">Skip to portfolio directory</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name">Portfolio Hub</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav-link" href="#directory">Directory</a>
+          <a class="nav-link" href="#about">About</a>
+          <a
+            class="nav-link nav-link--button"
+            href="mailto:you@example.com?subject=Portfolio%20Submission"
+            >Submit a portfolio</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Portfolio directory</p>
+            <h1 class="hero-title">Ñez Rey Jhon</h1>
+            <p class="hero-role">Front-End Developer • UI Builder • Web Enthusiast</p>
+            <p class="hero-bio">
+              Welcome to my portfolio hub — a clean, central directory where you can
+              browse multiple portfolio websites, explore tech stacks, and jump straight
+              to each project or person.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#directory">Explore portfolios</a>
+              <a class="btn btn-ghost" href="#about">How this hub works</a>
+            </div>
+
+            <div class="hero-metrics" aria-label="Quick highlights">
+              <div class="metric">
+                <div class="metric-value" id="metric-count">—</div>
+                <div class="metric-label">Portfolios listed</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">Modern</div>
+                <div class="metric-label">Responsive layout</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">Fast</div>
+                <div class="metric-label">Static site</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-panel" aria-label="Featured portfolios preview">
+            <div class="panel-card">
+              <div class="panel-badge">Featured</div>
+              <h2 class="panel-title">Browse the directory</h2>
+              <p class="panel-text">
+                Filter by name, category, or tech stack. Each card links out to an
+                external portfolio site.
+              </p>
+              <ul class="panel-list">
+                <li>Project/person name</li>
+                <li>Short description</li>
+                <li>Tech stack or category</li>
+                <li>Direct external link button</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="hero-bg" aria-hidden="true"></div>
+      </section>
+
+      <section class="section" id="directory" aria-label="Portfolio Directory">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">Portfolio Directory</h2>
+              <p class="section-subtitle">
+                Click any card to open its external portfolio website.
+              </p>
+            </div>
+
+            <div class="directory-controls" role="search">
+              <label class="sr-only" for="search">Search portfolios</label>
+              <input
+                id="search"
+                class="input"
+                type="search"
+                placeholder="Search by name, category, or tech…"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+
+          <div class="grid" id="cards" aria-live="polite"></div>
+
+          <div class="empty-state" id="empty" hidden>
+            <h3>No results</h3>
+            <p>Try a different search term.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--muted" id="about" aria-label="About this hub">
+        <div class="container about">
+          <div>
+            <h2 class="section-title">About</h2>
+            <p class="section-subtitle">
+              This is a lightweight, editable hub. Update a single list of portfolios
+              and the directory will render automatically.
+            </p>
+          </div>
+
+          <div class="about-cards">
+            <article class="info-card">
+              <h3>Easy to edit</h3>
+              <p>
+                Open <code>script.js</code> and update the <code>PORTFOLIOS</code> list
+                with your links, descriptions, and tech tags.
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Professional UI</h3>
+              <p>
+                Modern typography, responsive cards, accessible focus states, and
+                tasteful dark/light support.
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Deploy anywhere</h3>
+              <p>
+                It’s a static site—host on GitHub Pages, Netlify, Vercel, or any web
+                server.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-text">
+          © <span id="year"></span> Ñez Rey Jhon. Built as a portfolio hub directory.
+        </p>
+        <a class="footer-link" href="#top">Back to top</a>
+      </div>
+    </footer>
+  </body>
+</html>
